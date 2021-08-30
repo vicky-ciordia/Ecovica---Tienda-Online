@@ -1,0 +1,636 @@
+/**ESTILOS GENERALES*/
+
+*{
+    box-sizing: content-box; 
+}
+
+dl, ol, ul{
+    margin: 0;
+}
+
+input:focus{
+    outline: none;
+}
+
+input{
+    cursor: pointer;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #F2EEE8;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+  list-style: none;
+}
+
+ol li{
+    list-style: none;
+  }
+
+
+#logoHome img{
+    max-height: 5vh;
+
+}
+
+.tituloSecciones{
+    color: #3A4D43;
+    font-family: 'Brygada 1918', serif;
+    font-size: 5vw;
+    font-weight: lighter;
+    margin: 2rem 0;
+    padding: 4rem 6rem;
+    text-align: right;
+    }
+
+
+.nombreProducto{
+    color: #3A4D43;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-family: 'Brygada 1918', serif;
+    text-align: left;
+    margin: 0;
+    padding-bottom: 0;
+    
+}
+
+.detalleProducto{
+    margin: 0;
+}
+
+
+.botonVerMas{
+            display: block;
+            font-size: 1rem;
+            font-family: 'Brygada 1918', serif;
+            font-weight: lighter;
+            color:  #3A4D43; 
+            padding: .8rem;
+            border: 1px solid  #3A4D43;
+            text-align: center;
+            letter-spacing: 0.1rem;
+            position: relative;
+            text-decoration: none;
+            z-index: 998;
+            transition: color .8s linear;
+            background-color: #F2EEE8;
+            cursor: pointer;
+
+        }
+
+.botonVerMas:hover {
+    color: #F2EEE8;
+}
+
+.botonVerMas:before {
+    content: "";
+    background-color: #3A4D43;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -9;
+    }
+
+.botonVerMas:hover:before,
+.botonVerMas:focus:before {
+    animation: .4s hover linear;
+    animation-fill-mode: forwards;
+    }
+    @keyframes hover {
+    0% {transform: scaleX(0);height: 5px;}
+    45% {transform: scaleX(1);height: 5px;}
+    55% {height: 5px;}
+    100% {transform: scaleX(1);height: 100%;}
+    }
+
+    .overlay {
+        cursor: initial;
+      }
+
+    .overlay .botonVerMas {
+        margin: auto;
+        margin-top: 2rem;
+        grid-column: 1/2;
+        grid-row: 4/5;
+        padding: 1rem;
+        font-size: .8 rem;
+        cursor: pointer;
+      }
+
+      
+
+
+      
+
+/* MENU –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+header {
+    background-color: #F2EEE8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    align-items: center;
+    z-index: 980;
+    padding: 0;
+ }
+
+ #logoHome {
+     padding: .5rem 2rem;
+     margin:1rem;
+     width: 10%;
+ }
+
+
+/* Carrito –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+ #carritoShow{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 6rem;
+    padding-bottom: 0;
+    padding-right:0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 900;
+}
+
+#carritoOverlay {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    
+
+}
+
+.carritoCollapse {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 83vh;
+    padding: 5rem 3rem;
+    padding-bottom: 1rem;
+    background-color: #e6e4df;
+}
+
+
+#botonComprar{
+    background-color: transparent;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+#alertaCarritoVacio {
+    
+    width: 100%;
+    height: 100%;
+
+}
+
+#alertaCarritoVacio p{
+    
+    color: #3A4D43;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: 'Brygada 1918', serif;
+    text-align: center;
+
+}
+
+
+#listaCarrito {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 55vh;
+    justify-content: space-between;
+    overflow: scroll;
+
+}
+
+.contenedorNombreCarrito{
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid 1px #3A4D43; 
+    padding-bottom: .7rem;   
+    justify-content: space-between;
+}
+
+.botonEliminar{
+    border: none;
+    width: 20%;
+    background-image: url(../img/icono_eliminar.svg);
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 1rem;
+    background-size: contain;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.divProducto {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #d8d6cf;
+    align-items: center;
+}
+
+#listaCarrito .contenedorImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.divTexto {
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    text-align: left;
+    margin-left: 1rem;
+    justify-content: space-between;
+    height: 7rem;
+    width: 100%;
+}
+
+#divCheckout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+#contenedorForm{
+    width: 100%;
+
+}
+
+ form {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #3A4D43;
+    letter-spacing: .1rem;
+    font-weight: lighter;
+}
+
+.datosForm{
+    max-width: 100%;
+    background: none;
+    border: none;
+    padding-bottom: .4rem;
+    width: 30%;
+    text-align: center;
+}
+
+#cantidad, select {
+    background-color:transparent;
+    border:none;
+    border-bottom: 1px solid #3A4D43;
+    padding:1rem;
+    padding-left: 0;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #3A4D43;
+    letter-spacing: .1rem;
+    font-weight: lighter;
+}
+
+#cantidad{
+    width: 30%;
+    padding:1rem;
+    margin-right: .8rem;}
+
+input::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    color: #F2EEE8;
+}
+
+.botonForm{
+    margin-top: 1rem;
+    padding: .8rem;
+    background: none;
+    border: 1px solid #F2EEE8;
+    width: 10%;
+    color: #F2EEE8;
+    letter-spacing: .1rem;
+    cursor: pointer;
+}
+
+.botonForm:hover{
+    background-color: #F2EEE8;
+    color:  #3A4D43;
+}
+
+#error{
+    padding: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8rem;
+    color: #e64848;
+    letter-spacing: .1rem;
+    font-weight: lighter;
+    width: 100%;
+
+}
+
+
+.pagarTotal{
+    color: #3A4D43;
+    font-size: 1.3rem;
+    font-weight: normal;
+    font-family: 'Brygada 1918', serif;
+    text-align: center;
+    margin: auto;
+    margin-top: 9rem;
+    border-bottom: solid 1px #3A4D43;
+    padding-bottom: .5rem;
+    
+}
+
+.cerrar {
+    background-image: url(../img/cancel.svg);
+    background-repeat: no-repeat;
+    padding: .5rem;
+    margin: 1rem;
+    border: none;
+    background-color: #F2EEE8;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.carrito {
+    background-image: url(../img/shopping-cart.svg);
+    background-repeat: no-repeat;
+    padding: 1rem;
+    margin: 1rem .5rem;
+    border: none;
+    background-color: #F2EEE8;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+
+#carritoConenedor {
+    display: flex;
+    margin-right: 5rem;
+    cursor: pointer;
+}
+
+#cantidadProductos {
+    background-color: #3A4D43;
+    color:#F2EEE8;
+    text-align: center;
+    font-size: .7rem;
+    min-width: .9rem;
+    height: .8rem;
+    padding: .2rem .3rem .4rem .3rem ;
+    border-radius: 100%;
+}
+
+/* BOTON AGREGAR PRODUCTO HOVER –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.container .botonVerMas {
+    border: none;
+   
+}
+
+
+.overlay .head {
+    padding-top: 2rem;
+}
+
+
+/* POPUP DETALLE –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.popUpContenedor {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(12, 12, 12, 0.9);
+    z-index: 997;
+}
+
+#backgroundOverlay {
+    width: 100%;
+    z-index: 998;
+    height: 100%;
+}
+
+.popUpDetalle {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 25vh;
+    left: 32.5vw;
+    width: 35vw;
+    height: 50vh;
+    background-color: #F2EEE8;
+    margin: auto;
+    padding: 2rem;
+    z-index: 999;
+
+}
+
+.popUpContenedorTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 2rem;
+    position: relative;
+    width: 100%;
+
+}
+
+.popUpContenedorImg {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.popUpContenedorImg img {
+    max-width: 100%;
+
+}
+
+
+.popUpContenedorTexto img {
+    width: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.popUpContenedorTexto h2 {
+    font-size: 2rem;
+    font-family: 'Brygada 1918', serif;
+    color: #3A4D43;
+    margin-bottom: 1rem;
+}
+
+.popUpContenedorTexto p {
+    font-size: 1rem;
+    color: #3A4D43;
+    margin-top: 2rem;
+}
+
+#formProductosPopUp {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#linea {
+    border: 1px solid #3A4D43;
+    width: 30%;
+}
+
+.popUpForm {
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#agregarProducto {
+width: 100%;
+}
+
+/* FUN FACT –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#contenedorFunFact{
+    position: fixed;
+    display: flex;
+    background-color: white;
+    width: 250px;
+    height: 40px;
+    bottom:1rem;
+    left: 1rem;
+    padding: 1rem;
+    align-items: center;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1), 0 16px 30px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#contenedorImgUsuario {
+ border-radius: 100%;
+ width: 35px;
+ height: 35px;
+ margin-right: 1rem;
+ overflow: hidden;
+}
+
+#contenedorImgUsuario img{
+    width: 100%;
+   }
+
+ #nombreUltimoUsuario{
+    font-size: .7rem;
+    color: #3A4D43;
+   }
+
+    
+/* FOOTER –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+footer{
+    background-color: #3A4D43;
+    margin: 0;
+    padding: 3rem 0rem 4rem 0rem;
+    z-index: 800;
+}
+
+#contactoFooter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+#redesSociales{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0 1rem 1rem;
+    justify-content: center;
+    width: auto;
+}
+
+footer h3{
+    margin:0;
+    color: #A3ADA5; 
+    font-family: 'Brygada 1918', serif;
+    font-size: 2vw;
+    text-align:left;
+    padding-right: 2rem;
+}
+
+#lineaFooter{
+    width: 20%;
+    height: 0;
+    padding: 0;
+    border-bottom: 1px solid #A3ADA5;
+}
+
+footer p{
+    margin: 0;
+    color: #F2EEE8;
+    font-size: .8vw;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+
+.iconosFooter{
+    display: flex;
+    align-content: center;
+    width: 1.3vw;
+    height: 1.3vw;
+    border: 1px solid  #F2EEE8;
+    border-radius: 100%;
+    padding: 1vw;
+    margin-left: 1rem;
+}
+
+footer img{
+    width: 100%;
+    vertical-align: inherit;
+}

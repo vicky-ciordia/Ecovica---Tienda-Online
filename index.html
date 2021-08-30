@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="catalogo de productos ecológicos de Ecovica">
+    <meta name="keywords"  content="productos, ecología, cuidado personal, higiene, venta, compra, Ecovica">
+    <title>Ecovica, Tienda Online</title>
+    <link rel="stylesheet" href="css/estilosgenerales.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Brygada+1918&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+    <header> 
+        <a id="logoHome" href="index.html">
+            <img src="img/ecovica-logo.svg">
+        </a>
+        <div id="carritoConenedor">
+        <button id="verCarrito" class="carrito"></button>
+        <div id="cantidadProductos"></div>
+        </div>
+    </header>
+
+
+    <section id="carritoShow">
+        <div id="carritoOverlay"></div>>
+        <div id="carritoCollapse" class="carritoCollapse">
+            <div id="listaCarrito"></div>
+        </div>
+        
+        </section>
+
+
+<!--PRODUCTOS--------------------------------------------------------------------->
+
+
+<div>
+
+     <h1 class="tituloSecciones animate__animated animate__fadeIn">__ Tienda Online</h1>
+
+    <section class="productosContenidoGrid">
+            <div class="productosContenido">
+
+                <!--JABON SOLIDO -------->
+                <div id="producto1" class="contenedorProductos animate__animated animate__fadeInUp">
+                    <div class="imagenesProductos">
+                        <img src="img/jabon-solido.jpg" alt="Jabón sólido">
+                    </div>
+                    <div class="container">
+                        <div class="overlay">
+                                <div class = "items">
+                                </div>
+                                <div class = "items head">
+                                <p>Jabón sólido</p>
+                                <hr>
+                                </div>
+                                <div class = "items price">
+                                <p class="old">$699</p>
+                                <p class="new">$345</p>
+                                </div>
+                                <div class="items cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span></span>
+                            </div>
+                            <button class="botonVerMas botonAgregarProducto" value="01">Agregar al carrito</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--CREMA CORPORAL -------->
+                <div id="producto2" class="contenedorProductos animate__animated animate__fadeInDown">
+                    <div class="imagenesProductos">
+                        <img src="img/crema-corporal.jpg" alt="Crema corporal">
+                    </div>
+                    <div class="container">
+                        <div class="overlay">
+                                <div class = "items">
+                                </div>
+                                <div class = "items head">
+                                <p>Crema <br>corporal</p>
+                                <hr>
+                                </div>
+                                <div class = "items price">
+                                <p class="new">$840</p>
+                                </div>
+                                <div class="items cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span></span>
+                            </div>
+                            <button class="botonVerMas botonAgregarProducto" value="02">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                 <!--PERFUME NATURAL -------->
+                <div id="producto3" class="contenedorProductos animate__animated animate__fadeInUp">
+                    <div class="imagenesProductos">
+                        <img src="img/perfume-natural.jpeg" alt="Perfume natural">
+                    </div>
+                    <div class="container">
+                        <div class="overlay">
+                                <div class = "items">
+                                </div>
+                                <div class = "items head">
+                                <p>Perfume <br> natural</p>
+                                <hr>
+                                </div>
+                                <div class = "items price">
+                                <p class="new">$1670</p>
+                                </div>
+                                <div class="items cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span></span>
+                            </div>
+                            <button class="botonVerMas botonAgregarProducto" value="03">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--EXTRACTO DE CALENDULA -------->
+
+                <div id="producto4" class="contenedorProductos animate__animated animate__fadeInUp">
+                    <div class="imagenesProductos">
+                        <img src="img/extracto-calendula.jpg" alt="Extracto de caléndula">
+                    </div>
+                    <div class="container">
+                        <div class="overlay">
+                                <div class = "items">
+                                </div>
+                                <div class = "items head">
+                                <p>Extracto <br> de caléndula</p>
+                                <hr>
+                                </div>
+                                <div class = "items price">
+                                    <p class="new">$565</p>
+                                </div>
+                                <div class="items cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span></span>
+                            </div>
+                            <button class="botonVerMas botonAgregarProducto" value="04">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--REVIEW 1 --------> 
+                <div id="producto5" class="cartaTexto animate__animated animate__fadeInDown">
+                    <h4 class="cartaTexto__titulo">Probé la crema hidratante y enseguida noté la diferencia con las cremas comerciales. Mi piel ya no se brota con el sol.</h4>
+                    <p class="cartaTexto__parrafo">- Carolina Werner -</p>
+                </div>
+
+
+                <!--ACONDICIONADOR SOLIDO -------->
+                <div id="producto6" class="contenedorProductos animate__animated animate__fadeInUp">
+                    <div class="imagenesProductos">
+                        <img src="img/acondicionador-solido.jpeg" alt="Acondicionador sólido">
+                    </div>
+                    <div class="container">
+                        <div class="overlay">
+                                <div class = "items">
+                                </div>
+                                <div class = "items head">
+                                <p>Acondicionador sólido</p>
+                                <hr>
+                                </div>
+                                <div class = "items price">
+                                    <p class="new">$425</p>
+                                </div>
+                                <div class="items cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span></span>
+                            </div>
+                            <button class="botonVerMas botonAgregarProducto" value="05">Agregar al carrito</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--COPITA  -------->
+                <div id="producto7" class="contenedorProductos animate__animated animate__fadeInUp">
+                    <div class="imagenesProductos">
+                        <img src="img/copita.jpeg" alt="Copita">
+                    </div>
+                    <div class="container">
+                        <div class="overlay">
+                                <div class = "items">
+                                </div>
+                                <div class = "items head">
+                                <p>Acondicionador sólido</p>
+                                <hr>
+                                </div>
+                                <div class = "items price">
+                                   <p class="new">$1600</p>
+                                </div>
+                                <div class="items cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span></span>
+                                </div>
+                                <button class="botonVerMas botonAgregarProducto" value="06">Agregar al carrito</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--CEPILLO DE BAMBOO-------->
+                <div id="producto8" class="contenedorProductos animate__animated animate__fadeInDown">
+                    <div class="imagenesProductos animate__animated animate__fadeInUp">
+                        <img src="img/cepillo-bamboo.jpeg" alt="Cepillo de bamboo">
+                    </div>
+                    <div class="container">
+                        <div class="overlay">
+                                <div class = "items">
+                                </div>
+                                <div class = "items head">
+                                <p>Cepillo <br> de bamboo</p>
+                                <hr>
+                                </div>
+                                <div class = "items price">
+                                   <p class="new">$490</p>
+                                </div>
+                                <div class="items cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span></span>
+                            </div>
+                            <button class="botonVerMas botonAgregarProducto" value="07">Agregar al carrito</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--DESODORANTE SOLIDO-------->      
+                <div id="producto9" class="contenedorProductos animate__animated animate__fadeInUp">
+                    <div class="imagenesProductos">
+                        <img src="img/desodorante.jpeg" alt="Desodorante sólido">
+                    </div>
+                    <div class="container">
+                        <div class="overlay">
+                                <div class = "items">
+                                </div>
+                                <div class = "items head">
+                                <p>Desodorante <br>sólido</p>
+                                <hr>
+                                </div>
+                                <div class = "items price">
+                                   <p class="new">$335</p>
+                                </div>
+                                <div class="items cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span></span>
+                            </div>
+                            <button class="botonVerMas botonAgregarProducto" value="08">Agregar al carrito</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--REVIEW 2-------->
+                <div id="producto10" class="cartaTexto animate__animated animate__fadeInDown">
+                    <h4 class="cartaTexto__titulo">Hace tres meses probé los envoltorios ecológicos y me volví fan. ¡Hacen más linda mi heladera y son muy prácticos!</h4>
+                    <p class="cartaTexto__parrafo">- Natalia López Guerra -</p>
+                </div>
+
+                <!--ENVOLTORIO ECOLOGICO-------->
+                <div id="producto11" class="contenedorProductos animate__animated animate__fadeInDown">
+                    <div class="imagenesProductos">
+                        <img src="img/wrap.jpeg" alt="Envoltorio ecológico">
+                    </div>
+                    <div class="container">
+                        <div class="overlay">
+                                <div class = "items">
+                                </div>
+                                <div class = "items head">
+                                <p>Envoltorio ecológico</p>
+                                <hr>
+                                </div>
+                                <div class = "items price">
+                                   <p class="new">$450</p>
+                                </div>
+                                <div class="items cart">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span></span>
+                            </div>
+                            <button class="botonVerMas botonAgregarProducto" value="09">Agregar al carrito</button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!--REVIEW 3-------->
+                <div id="producto12" class="cartaTexto animate__animated animate__fadeInDown">
+                    <h4 class="cartaTexto__titulo">Probé el acondicionador sólido y me dejó el pelo muy suave (yo lo suelo tener muy seco). </h4>
+                    <p class="cartaTexto__parrafo">- Josefina Seis -</p>
+                </div>
+                
+            </div>
+    </section> 
+</div>
+
+<section id="funFact">
+</section>
+
+    
+<!--FOOTER-->
+<footer>
+    <div id="contactoFooter">
+        <h3>Sigamos conectados</h3>
+        <div id="lineaFooter"></div>
+        <div id="redesSociales">
+            <a class="iconosFooter" href="https://www.instagram.com/mecovica/" target="_blank"><img
+                    src="img/instagram.svg" alt="Logo de Instagram"></a>
+            <a class="iconosFooter" href="https://www.tiktok.com/@mecovica" target="_blank"><img
+                    src="img/tik-tok.svg" alt="Logo de Tik Tok"> </a>
+        </div>
+    </div>
+    <p>Copyright Ecovica - 2021. Todos los derechos reservados.</p>
+</footer>
+
+    <!--JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/clases.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>
