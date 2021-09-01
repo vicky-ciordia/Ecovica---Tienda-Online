@@ -166,22 +166,20 @@ header {
 /* Carrito –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– */
 
  #carritoShow{
-    display: flex;
-    flex-direction: row;
-    padding: 2rem 6rem;
-    padding-bottom: 0;
-    padding-right:0;
+    padding: 0;
     width: 100vw;
     height: 100vh;
     position: fixed;
-    right: 0;
     top: 0;
     z-index: 900;
+    display: grid;
+    grid-template-columns: 62vw 38vw;
+    grid-template-rows: 100vh;
 }
 
 #carritoOverlay {
-    width: 100vw;
-    height: 100vh;
+    grid-column: 1/2;
+    grid-row: 1/2;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     -moz-backdrop-filter: blur(10px);
@@ -190,11 +188,8 @@ header {
 }
 
 .carritoCollapse {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 30%;
-    height: 82vh;
+    grid-column: 2/3;
+    grid-row: 1/2;
     padding: 6rem 3rem 3rem 3rem;
     background-color: #e6e4df;
     display: flex;

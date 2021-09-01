@@ -153,7 +153,9 @@ $(document).ready(function() {
             $("#carritoShow").slideToggle(1000, function() {
 
                 if (carrito.length === 0) {
+   
                     $(".carritoCollapse").append('<div class="divCheckout" id="alertaCarritoVacio"><p> <b>No tenés ningún producto en el carrito <br> 😭😭</p></div>');
+                    ;
                 }
 
                 if (carrito.length != 0) {
