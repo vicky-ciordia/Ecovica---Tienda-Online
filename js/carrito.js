@@ -153,12 +153,12 @@ $(document).ready(function() {
             $("#carritoShow").slideToggle(1000, function() {
 
                 if (carrito.length === 0) {
-                    $(".carritoCollapse").append('<div id="alertaCarritoVacio"><p> <b>No tenés ningún producto en el carrito <br> 😭😭</p></div>');
+                    $(".carritoCollapse").append('<div class="divCheckout" id="alertaCarritoVacio"><p> <b>No tenés ningún producto en el carrito <br> 😭😭</p></div>');
                 }
 
                 if (carrito.length != 0) {
                     $(".alertaCarritoVacio").remove();
-                    $(".carritoCollapse").append('<div id="divCheckout"><select name="comunidad" id="comunidad"><option value="seleccionar">¿Sos miembro de la Comunidad Ecoviquera?</option><option value="si">¡Si, soy Ecoviquero!</option><option value="no">Todavía no :(</option> </select> <button class="botonVerMas" id="botonComprar"> Finalizar compra </button></div>')
+                    $(".carritoCollapse").append('<div class="divCheckout"><select name="comunidad" id="comunidad"><option value="seleccionar">¿Sos miembro de la Comunidad Ecoviquera?</option><option value="si">¡Si, soy Ecoviquero!</option><option value="no">Todavía no :(</option> </select> <button class="botonVerMas" id="botonComprar"> Finalizar compra </button></div>')
                     $("#botonComprar").click(checkOut);
                 }
             });
@@ -175,12 +175,12 @@ $(document).ready(function() {
             document.body.style.maxHeight = "100vh";
             document.body.style.overflow = "hidden";
 
-            $("#carritoOverlay").click(function() {
+            $("#carritoOverlay").one("click",function() {
                 $("#carritoShow").slideToggle(1000);
                 createLista.remove();
                 botonVerCarrito.className = "carrito";
                 buttonChange = true;
-                divCheckout.remove();
+                $(".divCheckout").remove();
                 document.body.style.maxHeight = "100%";
                 document.body.style.overflow = "visible";
             })
@@ -190,7 +190,7 @@ $(document).ready(function() {
             $("#carritoShow").slideToggle(1000, function() {
                 createLista.remove();
                 botonVerCarrito.className = "carrito";
-                divCheckout.remove();
+                $(".divCheckout").remove();
                 document.body.style.maxHeight = "100%";
                 document.body.style.overflow = "visible";
                 buttonChange = true;
@@ -213,11 +213,15 @@ $(document).ready(function() {
         carrito.splice(index, 1);
 
         if (carrito.length === 0) {
-            $("#divCheckout").fadeOut(500);
+            $(".divCheckout").fadeOut(500, function() {
+                $(".carritoCollapse").append('<div class="divCheckout" id="alertaCarritoVacio"><p> <b>No tenés ningún producto en el carrito <br> 😭😭</p></div>');
+            }
+        );
 
         }
 
         carritoCantidad(carrito);
+        console.log(carrito);
 
     }
 
@@ -237,7 +241,7 @@ $(document).ready(function() {
         $("#carritoShow").slideToggle(1000, function() {
             createLista.remove();
             botonVerCarrito.className = "carrito";
-            divCheckout.remove();
+            $(".divCheckout").remove();
             document.body.style.maxHeight = "100%";
             document.body.style.overflow = "visible";
             buttonChange = true;
