@@ -89,6 +89,7 @@ $(document).ready(function() {
             if (productoEvaluado != undefined) {
                 productoEvaluado.unidades += cantUnidades;
                 productoEvaluado.subtotal = productoEvaluado.unidades * productoEvaluado.precio;
+                productoEvaluado.stock -= productoEvaluado.unidades; 
 
             } else {
                 carrito.push(nuevoProducto);
